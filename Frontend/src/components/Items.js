@@ -22,8 +22,33 @@ const Items = ({ item, index, handleDelete, handleEdit, handleUpdate }) => {
           <p>TimeLine: {item.timeLine}</p>
           <p>Notes/Review: {item.notes}</p>
           <p>Link: {item.link}</p>
-          <button onClick={() => handleEdit(item)}>Edit</button>
-          <button onClick={() => handleDelete(item._id)}>Delete</button>
+          <button
+            style={{
+              backgroundColor: "#007bff",
+              color: "#fff",
+              border: "none",
+              padding: "8px 16px",
+              borderRadius: "5px",
+              marginRight: "5px",
+              cursor: "pointer"
+            }}
+            onClick={() => handleEdit(item)}
+          >
+            Edit
+          </button>
+          <button
+            style={{
+              backgroundColor: "#dc3545",
+              color: "#fff",
+              border: "none",
+              padding: "8px 16px",
+              borderRadius: "5px",
+              cursor: "pointer"
+            }}
+            onClick={() => handleDelete(item._id)}
+          >
+            Delete
+          </button>
         </li>
       )}
     </Draggable>
